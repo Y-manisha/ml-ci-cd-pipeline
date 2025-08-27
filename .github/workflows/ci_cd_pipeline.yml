@@ -40,7 +40,7 @@ jobs:
         python -m unittest discover -s tests
 
     - name: Deploy to Render
-       run: |
-        curl-X POST"https://api.render.com/v1/services/${{secrets.RENDER_SERVICES_ID}}/deploys"\
-        -H "Accept: application/json"\
-        -H "Authorization: Bearer ${{secrets.RENDER_API_KEY}}"
+      run: |
+        curl -X POST "https://api.render.com/v1/services/${{ secrets.RENDER_SERVICE_ID }}/deploys" \
+        -H "Accept: application/json" \
+        -H "Authorization: Bearer ${{ secrets.RENDER_API_KEY }}"
