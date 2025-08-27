@@ -7,7 +7,7 @@ import joblib
 data = pd.read_csv('data/iris.csv')
 
 # Preprocess the dataset
-X = data.drop('species', axis=1)
+X = data.drop('Species', axis=1)
 y = data['Species']
 
 # Split the data into training and test sets
